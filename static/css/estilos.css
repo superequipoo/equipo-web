@@ -920,7 +920,9 @@ footer{
 
     .carrusel-pista {
         display: flex;
+        widht: 100%;
         transition: transform 0.5s ease;
+       
     }
 
     .diapositiva {
