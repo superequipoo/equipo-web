@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecturas - Mundo del Saber</title>
-    <script src="{{ url_for('static', filename='scripts/scripts.js') }}" defer></script>
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 
+    <title>Lecturas - Mundo del Saber</title>
+
+    <script src="{{ url_for('static', filename='JS/script.js') }}" defer></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 </head>
+
 <body>
 
 <h2 class="titulo-seccion">Explora tus géneros de lectura</h2>
 
 <div class="carrusel">
+
     <button class="flecha flecha-izq" onclick="moverCarrusel(-1)">&#10094;</button>
+
     <button class="flecha flecha-der" onclick="moverCarrusel(1)">&#10095;</button>
 
     <div class="carrusel-pista" id="pista">
