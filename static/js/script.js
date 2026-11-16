@@ -2,9 +2,12 @@ let indiceCarrusel = 0;
 
 function moverCarrusel(direccion) {
     const pista = document.getElementById("pista");
-    const diapositivas = document.querySelectorAll("#pista .diapositiva");
 
-    if (!pista || diapositivas.length === 0) return;
+    if (!pista) return;
+
+    const diapositivas = pista.querySelectorAll(".diapositiva");
+
+    if (diapositivas.length === 0) return;
 
     indiceCarrusel += direccion;
 
@@ -16,6 +19,19 @@ function moverCarrusel(direccion) {
         indiceCarrusel = diapositivas.length - 1;
     }
 
+    const ancho = pista.parentElement.clientWidth;
+
     pista.style.transform =
-        `translateX(-${indiceCarrusel * 100}%)`;
+        `translateX(-${indiceCarrusel * ancho}px)`;
 }
+
+window.addEventListener("resize", function () {
+    const pista = document.getElementById("pista");
+
+    if (!pista) return;
+
+    const ancho = pista.parentElement.clientWidth;
+
+    pista.style.transform =
+        `translateX(-${indiceCarrusel * ancho}px)`;
+});
