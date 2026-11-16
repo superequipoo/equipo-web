@@ -110,7 +110,7 @@ def tiposlectura():
 
 @app.route('/aventura')
 def aventura():
-    return render_template('aventura_lengua.html')
+    return render_template('aventura_.html')
 
 @app.route('/fantasia')
 def fantasia():
